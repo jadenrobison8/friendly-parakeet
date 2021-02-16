@@ -9,6 +9,13 @@ var specialcharArr = ['!','"','#','$','%','&','(',')','*','+',',','-','.',':',';
 
 var numberArr = ['1','2,','3,','4','5','6','7','8','9','0'];
 
+var possibilities = [];
+var passlength = 0;
+var lowerchar = 0;
+var numbers = 0;
+var upperchar = 0;
+var specchar = 0;
+
 // Define characters
 var getCharacters = function() {
   
@@ -46,7 +53,31 @@ var getCharacters = function() {
 
 }//end Get char function
 
+//gernerate password function
+var generatePassword = function () {
+  
+  //reference get character function
+  getCharacters(); 
 
+  //console.log(possibilities);
+
+  //password array
+  var password = [];
+
+  for (var i = 0; i < passlength; i++) {
+
+    var possiblechar = Math.floor(Math.random() * possibilities.length);
+    password.push(possibilities[possiblechar]);
+
+  }
+
+  //console.log(password);
+
+  password = password.join('');
+
+  return password;
+
+} //end generate password function
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
