@@ -4,9 +4,6 @@
 a website that generates a password between 8 and 128 characters, and allows you to choose
 whether to include uppercase, lowercase, numbers and special characters
 
-## Screenshot
-friendly-parakeet-scrshot.png
-
 ## Built with 
 * HTML
 * CSS
